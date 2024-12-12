@@ -22,6 +22,3 @@ The goal of this project is to develop an automated robust feedback analysis sys
 
 ## Some Classified Sentiments
 ![](static/StudentScrn16.png)
-
-### Youtube Link
-https://youtu.be/5akxmMmsAIM

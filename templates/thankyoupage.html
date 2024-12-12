@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Thank You - Feedback System</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Montserrat:300,400,500,700|Poppins:300,400,500,700" rel="stylesheet">
+  <link href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-container">
+      <h1>Thank You for Your Valuable Feedback</h1>
+      <p>"Without honest student feedback, growth takes a backseat."</p>
+      <a href="/" class="btn-get-started">Return Home</a>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>Help Us Improve</h2>
+        <p>Let us know how we can improve our services.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section-bg">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact Us</h2>
+      </div>
+      <form action="/submit_contact" method="post" class="php-email-form">
+        <div class="form-row">
+          <div class="col-md-6 form-group">
+            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6 form-group">
+            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <p>&copy; 2024 Feedback System. All Rights Reserved.</p>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vendor JS Files -->
+  <script src="{{url_for('static',filename='vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/aos/aos.js')}}"></script>
+</body>
+
+</html>

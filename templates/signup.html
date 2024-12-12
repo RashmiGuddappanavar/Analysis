@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Sign Up - Feedback System</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Montserrat:300,400,500,700|Poppins:300,400,500,700" rel="stylesheet">
+  <link href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
+</head>
+
+<body>
+  <section id="hero" class="hero-section">
+    <div class="hero-container">
+      <h1>Create Your Account</h1>
+      <p>Join us to provide feedback and help us improve.</p>
+      <form action="/signup" method="POST" class="signup-form">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" class="form-control" placeholder="Enter your username" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm_password">Confirm Password</label>
+          <input type="password" id="confirm_password" name="confirm_password" class="form-control" placeholder="Confirm your password" required>
+        </div>
+        
+        <!-- Added Role Selection Field -->
+        <div class="form-group">
+          <label for="role">Role</label>
+          <select id="role" name="role" class="form-control" required>
+              <option value="admin">Admin</option>
+              <option value="hod">Head of Department</option>
+              <option value="teacher">Teacher</option>
+              <option value="student">Student</option>
+          </select>
+      </div>
+      
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+        </div>
+      </form>
+      <p>Already have an account? <a href="/login">Login</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <p>&copy; 2024 Feedback System. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Vendor JS Files -->
+  <script src="{{url_for('static',filename='vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/aos/aos.js')}}"></script>
+</body>
+
+</html>
